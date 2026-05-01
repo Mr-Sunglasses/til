@@ -1,0 +1,10 @@
+base_url = "base-url-for-this-side"
+mastodon = "your-mastodon-link"
+
+[[top_links]]
+title = "Homepage"
+url = "link-to-homepage"
+
+[[top_links]]
+title = "Blog"
+url = "link-to-your-blog"
