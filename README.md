@@ -1,17 +1,16 @@
-# til-template
+# TILs 
 
-A template repository for TIL's posts powered by [tiller](https://github.com/woodruffw/tiller).
+A repository for TIL's posts powered by [tiller](https://github.com/woodruffw/tiller).
 
-Special thanks to [William Woodruff](https://github.com/woodruffw/) for creating [tiller](https://github.com/woodruffw/tiller). This template is inspired from [woodruffw/til](https://github.com/woodruffw/til).
+Special thanks to [William Woodruff](https://github.com/woodruffw/) for creating [tiller](https://github.com/woodruffw/tiller). This is inspired from [woodruffw/til](https://github.com/woodruffw/til).
 
 ## Getting Started
 
-1. Click **"Use this template"** on GitHub to create your own repository from this template.
-2. Clone your new repository.
-3. Install [tiller](https://github.com/woodruffw/tiller).
-4. Edit `tiller.toml` with your site's `base_url` and links.
-5. Edit `_index.md` to customize your site's homepage.
-6. Run `make serve` to build and preview your site.
+1. Clone your new repository.
+2. Install [tiller](https://github.com/woodruffw/tiller).
+3. Edit `tiller.toml` with your site's `base_url` and links.
+4. Edit `_index.md` to customize your site's homepage.
+5. Run `make serve` to build and preview your site.
 
 ## Usage
 

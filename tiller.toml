@@ -1,10 +1,10 @@
-base_url = "base-url-for-this-side"
-mastodon = "your-mastodon-link"
+base_url = "https://kanishkk.xyz/tils/"
+mastodon = "@itskanishkp@fosstodon.org"
 
 [[top_links]]
 title = "Homepage"
-url = "link-to-homepage"
+url = "https://kanishkk.xyz"
 
 [[top_links]]
 title = "Blog"
-url = "link-to-your-blog"
+url = "https://blog.kanishkk.xyz"
