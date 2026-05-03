@@ -40,7 +40,7 @@ new: ## Create a new TIL from template; usage: make new title="My Title" tags="t
 		echo "Error: $$FILENAME already exists"; \
 		exit 1; \
 	fi; \
-	sed -e 's/title of til/$(title)/' -e 's/2024-08-02/'"$$DATE"'/' -e 's/this is a tag, this is an other tag/'"$$TAGS"'/' tils/template.md > "$$FILENAME"; \
+	printf '%s\n%s\n%s\n%s\n%s\n\n' '---' "title: \"$(title)\"" "tags: [$$TAGS]" "date: $$DATE" '---' > "$$FILENAME"; \
 	echo "Created $$FILENAME"
 
 clean: ## Remove the generated site directory
