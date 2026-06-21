@@ -4,7 +4,7 @@ tags: [fifa,  piracy,  freedom,  iptv]
 date: 2026-06-21
 ---
 
-Watch fifa worldcup for free using this iptv link: [https://iptv-org.github.io/iptv/index.m3u]( https://iptv-org.github.io/iptv/index.m3u)
+Watch fifa worldcup for free using this iptv link: [https://iptv-org.github.io/iptv/index.m3u](https://iptv-org.github.io/iptv/index.m3u)
 
 - Use VLC media player to stream.
 
