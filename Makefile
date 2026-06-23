@@ -1,6 +1,6 @@
 PORT ?= 8000
 
-.PHONY: all build dev serve clean new help
+.PHONY: all build dev serve clean new new-i help
 
 TILLER := $(shell which tiller 2>/dev/null)
 
@@ -42,6 +42,9 @@ new: ## Create a new TIL from template; usage: make new title="My Title" tags="t
 	fi; \
 	printf '%s\n%s\n%s\n%s\n%s\n\n' '---' "title: \"$(title)\"" "tags: [$$TAGS]" "date: $$DATE" '---' > "$$FILENAME"; \
 	echo "Created $$FILENAME"
+
+new-i: ## Interactively create a new TIL using gum
+	@./scripts/new-til.sh
 
 clean: ## Remove the generated site directory
 	$(RM) -r site/

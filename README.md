@@ -22,6 +22,14 @@ make new title="Your TIL Title" tags="tag1, tag2"
 
 This creates a new markdown file in `tils/` with today's date and the given title and tags. If `tags` is omitted, the default tags from [tils/template.md](tils/template.md) are used.
 
+### Create a new TIL interactively
+
+```bash
+make new-i
+```
+
+Walks you through creating a new TIL with [gum](https://github.com/charmbracelet/gum): prompts for a title, lets you pick from existing tags or add new ones, then offers to open the new file in `$EDITOR`. Requires `gum` to be installed and a real terminal (it won't work over piped/non-interactive input).
+
 ### Build the site
 
 ```bash
