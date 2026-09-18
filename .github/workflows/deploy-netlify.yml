@@ -18,13 +18,22 @@ jobs:
         with:
           ref: master
 
-      - name: Install Tiller
+      - name: Set up Rust
         uses: dtolnay/rust-toolchain@stable
 
+      - name: Restore Tiller cache
+        id: tiller-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/tiller
+          key: ${{ runner.os }}-tiller-cli-v1
+
+      - name: Install Tiller
+        if: steps.tiller-cache.outputs.cache-hit != 'true'
+        run: cargo install tiller --locked
+
       - name: Generate the site
-        run: |
-          cargo install tiller --locked
-          make build
+        run: make build
 
       - name: Deploy the generated site
         run: npx --yes netlify-cli deploy --dir=site --prod
