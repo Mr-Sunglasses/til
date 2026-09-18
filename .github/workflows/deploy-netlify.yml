@@ -1,0 +1,36 @@
+name: Deploy site to Netlify
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - closed
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the merged site
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Install Tiller
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Generate the site
+        run: |
+          cargo install tiller --locked
+          make build
+
+      - name: Deploy the generated site
+        run: npx --yes netlify-cli deploy --dir=site --prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
